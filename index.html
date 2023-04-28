@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="qricon.ico" />
+    <title>Awesome QR Code Generator</title>
+
+    <!--Link CSS to clear default setting of browsers for uniformity-->
+    <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+
+  </head>
+
+  <body>
+
+    <h1>QR code</h1>
+
+    <main>
+
+      <section id="qr-code-settings" class="container container-front">
+        <header>
+          <h2>Generate your QR code</h2>
+        </header>
+
+        <div>
+          <div class="setting">
+              <label for="data"><strong>Text/URL</strong></label>
+              <span class="sublabel">Enter the text or URL you want the QR code for:</span>
+              <!--From documentation: Min charcount=1  Max charcount=900-->
+              <input type="text" name="data" id="data" min="1" max="900"/>
+          </div>
+        
+        <header>
+          <h3>Adjust the settings below to customize your QR code</h3>
+        </header>
+
+          <!--Main Color Selection-->
+          <div class="colors">
+            <div class="setting">
+              <label for="color"><strong>Main Color</strong></label>
+              <input type="color" id="color" value="#000000">
+              <span class="sublabel" id="color-value">#000000</span>
+            </div>
+          <!--Background Color Selection-->
+            <div class="setting">
+              <label for="bg-color"><strong>Background Color</strong></label>
+              <input type="color" id="bg-color" value="#ffffff">
+              <span class="sublabel" id="bg-color-value">#ffffff</span>
+            </div>
+          </div>
+          <!--Size Selection (200x200 default, min=100, max=1000)-->
+          <div class="size-setting">
+            <label for="size"><strong>Size</strong></label>
+            <span id="size-value" class="sublabel">200 x 200</span>
+            <input type="range" name="size" id="size" min="100" max="1000"
+            value="200" step="100"/>
+          </div>
+
+          <!--Margin Selection (default value 1, min=0, max=100)-->
+          <div class="margin-setting">
+            <label for="margin"><strong>Margin</strong></label>
+            <span id="margin-value" class="sublabel">1 px</span>
+            <input type="range" name="margin" id="margin" min="0" max="100"
+            value="1" step="1"/>
+          </div>
+          <!--Image Format Selection (PNG, )-->
+          <div class="setting">
+            <fieldset>
+              <legend><strong>Image Format</strong></legend>
+
+              <!--PNG-->
+              <div>
+                <input type="radio" name="format" id="png" value="png" checked>
+                <label for="png">PNG</label>
+              </div>
+
+              <!--GIF-->
+              <div>
+                <input type="radio" name="format" id="gif" value="gif">
+                <label for="gif">GIF</label>
+              </div>
+
+              <!--JPEG-->
+              <div>
+                <input type="radio" name="format" id="jpeg" value="jpeg">
+                <label for="jpeg">JPEG</label>
+              </div>
+
+              <!--JPG-->
+              <div>
+                <input type="radio" name="format" id="jpg" value="jpg">
+                <label for="jpg">JPG</label>
+              </div>
+
+              <!--SVG-->
+              <div>
+                <input type="radio" name="format" id="svg" value="svg">
+                <label for="svg">SVG</label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="cta">
+            <button id="cta" type="submit" disabled>Generate QR code</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="qr-code-result" class="container container-back">
+        <header>
+          <h2>Here is your QR code!</h2>
+          <h3>Scan this image to see it in action!</h3>
+        </header>
+        <div class="setting">
+          <img src="" alt="qr-code" id="qr-code-image">
+        </div>
+
+        <div class="info">
+          <p>Right click on this image and select <b>"Save image as..."</b>
+          to download the file</p>
+
+          <p>Or need to make some change?</p>
+
+          <div class="cta">
+            <button id="edit" type="submit">
+              Go back
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

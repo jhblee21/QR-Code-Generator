@@ -1,0 +1,404 @@
+body {
+    background-color: #f8f0dd;
+    padding: 0 2rem;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    border-bottom: 1px solid grey;
+    display: inline-block;
+    padding-right: 2rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* allows container to be flipped along y-axis */
+    -webkit-perspective: 150rem;    
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    margin: 0 auto;
+}
+
+.container {
+    background-color: white;
+    border-radius: 1rem;
+
+    /* set container widths */
+    min-width: 350px;
+    width: 50%;
+    max-width: 500px;
+
+    min-height: 700px;
+    padding: 0 2rem;
+
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+.container-front.flipped {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+.container-back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.container-back.flipped {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+}
+
+.container header {
+    text-align: center;
+}
+
+.container header h2 {
+    margin-bottom: 0.2rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+.container header h3 {
+    margin-top: 0.2rem;
+    font-weight: 200;
+    font-size: 0.75rem;
+    width: 90%;
+    margin: 0 auto;
+    font-family: "Trebuchet MS", sans-serif;
+    padding: 0 1rem;
+}
+
+.setting label {
+    font-size: 0.9rem;
+}
+
+.setting {
+    margin: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 0.9rem;
+}
+
+.sublabel {
+    font-size: 0.75rem;
+    font-weight: 200;
+}
+
+input[type="text"] {
+    border: 1px solid #000;
+    padding: 0.35rem 0.85rem 0.35rem 0.4rem;
+    line-height: 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 200;
+    border-radius: 0.4rem;
+    font-family: "Courier New", sans-serif;
+}
+
+/* Add focus to highlight textbox border */
+input[type="text"]:focus {
+    outline: none;
+    border: 1px solid #dea764;
+}
+
+.colors {
+    display: inline-flexbox;
+    justify-content: space-around;
+    margin: 0 auto;
+    
+}
+
+.colors .setting {
+    align-items: center;
+    text-align: center;
+    margin: 0.5rem;
+    margin-bottom: 0rem;
+}
+
+/* Default color inputs are none */
+input[type="color"] {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background:none;
+
+    border: 1px solid #000000;
+    height: 50px;
+    width:  50px;
+    padding: 0.2rem;
+    cursor: pointer;
+}
+
+/* Change outline color of color boxes */
+input[type="color"]:focus {
+    outline: none;
+    border: 2px solid #dea764;
+    border-radius: 4px;
+}
+
+::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+::-moz-color-swatch-wrapper {
+    padding: 0;
+}
+
+::-webkit-color-swatch {
+    border: 0;
+}
+
+::-moz-color-swatch {
+    border: 1px solid #000000;
+}
+
+.size-setting {
+    margin: 0.5rem 2rem;
+    margin-top: 0rem;
+    display: flex;
+    flex-direction: column;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 0.9rem;
+}
+
+.size-setting .sublabel {
+    margin-bottom: 1rem;
+}
+
+.margin-setting {
+    margin: 0.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 0.9rem;
+}
+
+.margin-setting .sublabel {
+    margin-bottom: 1rem;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;   /* Reset Chrome/Safari browser appearance */
+    -moz-appearance: none;      /* Reset Mozilla browser appearance */
+    width: 100%;
+    height: 5px;
+    border-radius: 3px;
+    background: #d9d9d9;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Default webkit Slider Thumb Appearance */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fdc886;
+    cursor: pointer;
+    -webkit-transition: background 0.15s ease-in-out;
+    transition: background 0.15s ease-in-out;
+}
+
+/* Hover webkit Slider Thumb Appearance */
+input[type="range"]::-webkit-slider-thumb:hover {
+    background: #dea764;
+}
+
+/* Active webkit Slider Thumb Appearance */
+input[type="range"]:active::-webkit-slider-thumb {
+    background: #dea764;
+}
+
+/* Default moz Slider Thumb Appearance */
+input[type="range"]::-moz-slider-thumb {
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fdc886;
+    cursor: pointer;
+    -moz-transition: background 0.15s ease-in-out;
+    transition: background 0.15s ease-in-out;
+}
+
+/* Hover moz Slider Thumb Appearance */
+input[type="range"]::-moz-slider-thumb:hover {
+    background: #dea764;
+}
+
+/* Active moz Slider Thumb Appearance */
+input[type="range"]:active::-moz-slider-thumb {
+    background: #dea764;
+}
+
+/* Active webkit Slider Thumb Focus */
+input[type="range"]:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 0 3px #fff, 0 0 0 5px #dea764;
+}
+
+/* Active moz Slider Thumb Focus */
+input[type="range"]:focus::-moz-slider-thumb {
+    box-shadow: 0 0 0 3px #fff, 0 0 0 5px #dea764;
+}
+
+::moz-range-track {
+    background: #d7dcdf;
+    border: 0;
+}
+
+input::-webkit-focus-inner,
+input::-webkit-focus-outer {
+    border: 0;
+}
+
+input::-moz-focus-inner,
+input::-moz-focus-outer {
+    border: 0;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    padding: 2px;
+    background-clip: content-box;
+    border: 1px solid #fdc886;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked {
+    background-color: #fdc886;
+}
+
+input[type="radio"]:focus {
+    outline: none;
+    border: 2px solid #dea764;
+    background-color: #dea764;
+}
+
+fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    border: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-evenly;
+}
+
+fieldset legend {
+    margin-bottom: 0.5rem;
+}
+
+fieldset div {
+    border: 1px solid #000000;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+fieldset div:last-child {
+    margin-right: 0;
+}
+
+fieldset div input {
+    margin-right: 0.25rem;
+    cursor: pointer;
+}
+
+fieldset div label {
+    cursor: pointer;
+}
+
+button {
+    background: #fdc886;
+    padding: 0.5rem 1.2 rem;
+    font-size: 1.1rem;
+    font-family: "Trebuchet MS", sans-serif;
+    font-weight: 500;
+    border-radius: 0.3rem;
+    margin: 0.5rem auto 1.5rem;
+    border: 2px solid #fdc886;
+    line-height: 1.1rem;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+
+button:hover {
+    transform: translateY(-0.1rem);
+    transition: all 0.15s ease-in-out;
+}
+
+button:active {
+    background-color: #dea764;
+    border: 2px solid #dea764;
+    transition: all 0.15s ease-in-out;
+}
+
+button:focus {
+    outline: none;
+    border: 2px solid #dea764;
+
+}
+
+button:disabled {
+    outline: none;
+    transition: none;
+    transform: none;
+    cursor: not-allowed;
+}
+
+.cta {
+    display: flex;
+}
+
+input.error {
+    border: 2px solid #de8064;
+}
+
+input.error:focus {
+    border: 2px solid #cd4218;
+}
+
+.setting img {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.info {
+    text-align: center;
+    margin-top: 0.2rem;
+    font-weight: 200;
+    font-size: 0.9rem;
+    width: 80%;
+    margin: 0 auto;
+}
