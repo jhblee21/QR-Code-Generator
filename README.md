@@ -69,9 +69,9 @@ Use the `BLANK_README.md` to get started.
 <!-- BUILT WITH -->
 ## Built with
  
-* ![html]
-* ![css]
-* JavaScript
+* <img src="images/logo-html5.png" alt="Logo" width="80" height="80">
+* <img src="images/logo-css3.png" alt="Logo" width="80" height="80">
+* <img src="images/logo-js.png" alt="Logo" width="80" height="80">
   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
   
@@ -138,6 +138,3 @@ Use this space to list resources you find helpful and would like to give credit 
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
-[html]: https://www.w3.org/html/logo/badge/html5-badge-h-solo.png
-[css]: https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/512px-CSS3_logo.svg.png?20210705212817
-[js]: 
