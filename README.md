@@ -54,7 +54,7 @@
 
 This is a custom QR Code Generator that utilizes the QR code API at api.qrserver.com. Users can enter texts or URL's they wish to generate the QR code for.
 
-This generator allows uers to customize the following:
+This generator allows users to customize the following:
 * Main color of the QR code (RGB, HSL, hexadecimal, or via color picker)
 * Background color of the QR code (RGB, HSL, or hexadecimal, or via color picker)
 * Size of the QR code (100x100 through 1000x1000, 100px increments)
