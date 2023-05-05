@@ -26,7 +26,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/jhblee21/QR-Code-Generator/blob/main/README.md">
-    <img src="images/qrcodegenerator.png" alt="Logo" width="80" height="80">
+    <img src="images/qricon.png" alt="Logo" width="80" height="80">
   </a>
 
 
