@@ -18,7 +18,7 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![LinkedIn][linkedin-shield]][[linkedin-url](https://www.linkedin.com/in/james-lee-a6434310a/)]
+[![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/james-lee-a6434310a/)
 
 
 
